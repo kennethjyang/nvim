@@ -1,6 +1,9 @@
 -- LSPs
 
 vim.lsp.enable('lua_ls')
+require 'config.lsp.lua_ls'
+
+vim.lsp.enable('nixd')
 
 -- Autocomplete
 vim.api.nvim_create_autocmd('LspAttach', {
