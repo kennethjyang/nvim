@@ -2,5 +2,5 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 
-require "options"
-require "lazy-pm"
+require "config.options"
+require "config.lazy"
