@@ -1,9 +1,9 @@
 -- [[ Editor Behavior ]]
 
 -- Save and quit
-vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Write' })
-vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Quit' })
-vim.keymap.set('n', '<leader>x', ':x<CR>', { desc = 'Write & Quit' })
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Write' })
+vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Quit' })
+vim.keymap.set('n', '<leader>x', '<cmd>x<CR>', { desc = 'Write & Quit' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -41,12 +41,14 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Buffer navigation
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous Buffer" })
+vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous Buffer' })
 
 -- Toggles
+vim.keymap.set('n', '<leader>tf', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Toggle Files' })
+vim.keymap.set('n', '<leader>tg', '<cmd>LazyGit<CR>', { desc = 'Toggle LazyGit' })
 
 -- [[ Editing Shortcuts ]]
 
 -- Y to EOL
-vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
+vim.keymap.set('n', 'Y', 'y$', { desc = 'Yank to end of line' })
