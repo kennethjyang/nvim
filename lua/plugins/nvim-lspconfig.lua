@@ -1,3 +1,4 @@
+-- Various LSP configurations
 return {
-    'neovim/nvim-lspconfig',
+  'neovim/nvim-lspconfig',
 }
