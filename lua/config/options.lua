@@ -30,9 +30,6 @@ vim.o.termguicolors = true
 -- Highlight matching brackets.
 vim.o.showmatch = true
 
--- Completion window options.
-vim.o.completeopt = "fuzzy,menuone"
-
 -- [[ Editing Features ]]
 
 -- Indentation.
