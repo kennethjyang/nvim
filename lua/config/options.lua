@@ -33,6 +33,12 @@ vim.o.showmatch = true
 -- Replace vim.ui.select with MiniPick
 vim.ui.select = MiniPick.ui_select
 
+-- Neovide options
+if vim.g.neovide then
+  vim.o.guifont = "JetBrainsMono Nerd Font"
+  vim.g.neovide_theme = 'auto'
+end
+
 -- [[ Editing Features ]]
 
 -- Indentation.
