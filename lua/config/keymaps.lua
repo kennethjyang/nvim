@@ -54,6 +54,10 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Make splits
+vim.keymap.set('n', '<leader>bs', '<cmd>split<CR>', { desc = 'Split Buffer' })
+vim.keymap.set('n', '<leader>bv', '<cmd>vsplit<CR>', { desc = 'Vertically split Buffer' })
+
 -- Buffer navigation
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next Buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous Buffer' })
@@ -76,3 +80,7 @@ vim.keymap.set('n', '<leader>fr', '<cmd>Pick resume<CR>', { desc = 'Resume Findi
 
 -- Y to EOL
 vim.keymap.set('n', 'Y', 'y$', { desc = 'Yank to end of line' })
+
+-- Better indenting in visual mode
+vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
+vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })

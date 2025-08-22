@@ -60,13 +60,18 @@ end
 
 -- [[ Editing Features ]]
 
--- Indentation.
+-- Indentation
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.autoindent = true
 vim.o.breakindent = true
+
+-- Folding
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldlevel = 99
 
 
 -- [[ Editor Behavior ]]
