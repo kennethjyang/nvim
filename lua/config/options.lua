@@ -30,6 +30,9 @@ vim.o.termguicolors = true
 -- Highlight matching brackets.
 vim.o.showmatch = true
 
+-- Replace vim.ui.select with MiniPick
+vim.ui.select = MiniPick.ui_select
+
 -- [[ Editing Features ]]
 
 -- Indentation.
