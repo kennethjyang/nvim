@@ -57,6 +57,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Buffer navigation
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next Buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous Buffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>%bd<CR>', { desc = 'Clear Buffers' })
 
 -- Toggles
 vim.keymap.set('n', '<leader>tf', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Toggle Files' })
@@ -67,7 +68,7 @@ vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<CR>', { desc = 'Find Files' }
 vim.keymap.set('n', '<leader>fs', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Find Session' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<CR>', { desc = 'Find Help' })
 vim.keymap.set('n', '<leader>fb', '<cmd>Pick buffers<CR>', { desc = 'Find Buffers' })
-vim.keymap.set('n', '<leader>f/', '<cmd>Pick grep pattern="" globs={"%"}<CR>', { desc = 'Find Text' })
+vim.keymap.set('n', '<leader>f/', '<cmd>Pick grep pattern="" globs={"%"}<CR>', { desc = 'Find text in current buffer' })
 vim.keymap.set('n', '<leader>fr', '<cmd>Pick resume<CR>', { desc = 'Resume Finding' })
 
 

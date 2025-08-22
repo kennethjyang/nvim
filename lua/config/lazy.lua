@@ -28,6 +28,6 @@ require('lazy').setup({
 
   -- Disable colorscheme.
   install = {
-    colorscheme = nil,
+    colorscheme = { 'tokyonight' },
   }
 })
