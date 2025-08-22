@@ -53,6 +53,7 @@ vim.o.breakindent = true
 -- [[ Editor Behavior ]]
 
 -- Save undo history.
+-- vim.g.transparency = 1.0
 vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term.

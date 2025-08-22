@@ -6,6 +6,7 @@ return {
     spec = {
       { '<leader>b', group = 'Buffer' },
       { '<leader>t', group = 'Toggle' },
+      { '<leader>f', group = 'Find' },
     },
   },
   keys = {
