@@ -10,6 +10,7 @@ vim.o.relativenumber = true
 -- Line.
 vim.o.cursorline = true
 vim.o.wrap = true
+vim.o.linebreak = true
 
 -- Keep signcolumn on by default.
 vim.o.signcolumn = 'yes'
