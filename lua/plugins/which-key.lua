@@ -6,6 +6,7 @@ return {
     spec = {
       { '<leader>b', group = 'Buffer' },
       { '<leader>f', group = 'Find' },
+      { 'gr',        group = 'LSP actions' },
       { '<leader>s', group = 'Sessions' },
       { '<leader>t', group = 'Toggle' },
     },

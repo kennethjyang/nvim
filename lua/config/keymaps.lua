@@ -80,18 +80,29 @@ end, { desc = 'Write Session' })
 vim.keymap.set('n', '<leader>ss', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Select Session' })
 vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', { desc = 'Delete Session' })
 
+-- Diagnostic
+vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Show Diagnostics' })
+
 -- [[ Toggles ]]
 vim.keymap.set('n', '<leader>tf', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Toggle Files' })
 vim.keymap.set('n', '<leader>tg', '<cmd>LazyGit<CR>', { desc = 'Toggle LazyGit' })
 vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle Terminal (horizontal)' })
 vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = 'Toggle Terminal (vertical)' })
 vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Toggle Zoom" })
+vim.keymap.set('n', '<leader>tl', function()
+  if vim.diagnostic.config().virtual_lines then
+    vim.diagnostic.config({ virtual_lines = false })
+  else
+    vim.diagnostic.config({ virtual_lines = { current_line = true } })
+  end
+end, { desc = 'Toggle diagnostic virtual_lines' })
 
 -- [[ Finders / Pickers ]]
 vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<CR>', { desc = 'Find Files' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<CR>', { desc = 'Find Help' })
 vim.keymap.set('n', '<leader>fb', '<cmd>Pick buffers<CR>', { desc = 'Find Buffers' })
 vim.keymap.set('n', '<leader>f/', '<cmd>Pick grep pattern="" globs={"%"}<CR>', { desc = 'Find text in current buffer' })
+vim.keymap.set('n', '<leader>fp', '<cmd>Pick grep pattern=""<CR>', { desc = 'Find text in project' })
 vim.keymap.set('n', '<leader>fr', '<cmd>Pick resume<CR>', { desc = 'Resume Finding' })
 
 
