@@ -1,7 +1,16 @@
--- LSPs
+-- [[ LSPs ]]
 
+-- Lua
 vim.lsp.enable('lua_ls')
+
+-- Nix
 vim.lsp.enable('nixd')
+
+-- Markdown
+vim.lsp.enable('marksman')
+vim.lsp.enable('ltex_plus')
+
+-- [[ Autocmds ]]
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),

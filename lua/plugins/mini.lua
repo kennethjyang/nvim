@@ -9,6 +9,7 @@ return {
     })
     require('mini.pick').setup()
     require('mini.extra').setup()
+    require('mini.misc').setup()
     require('mini.statusline').setup()
     require('mini.diff').setup()
   end,

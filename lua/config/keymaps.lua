@@ -63,11 +63,14 @@ vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next Buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous Buffer' })
 vim.keymap.set('n', '<leader>bd', '<cmd>%bd<CR>', { desc = 'Clear Buffers' })
 
--- Toggles
+-- [[ Toggles ]]
 vim.keymap.set('n', '<leader>tf', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Toggle Files' })
 vim.keymap.set('n', '<leader>tg', '<cmd>LazyGit<CR>', { desc = 'Toggle LazyGit' })
+vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle Terminal (horizontal)' })
+vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = 'Toggle Terminal (vertical)' })
+vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Toggle Zoom" })
 
--- Finders / Pickers
+-- [[ Finders / Pickers ]]
 vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<CR>', { desc = 'Find Files' })
 vim.keymap.set('n', '<leader>fs', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Find Session' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<CR>', { desc = 'Find Help' })
