@@ -38,3 +38,6 @@ Only install what you want to use
 - Markdown
     - `marksman`
     - `ltex-ls-plus`
+- LaTeX
+    - `texlab`
+    - `skim` (a compatible viewer)

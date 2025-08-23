@@ -35,6 +35,7 @@ vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 
+
 -- [[ Editor Navigation ]]
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
@@ -58,10 +59,21 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<leader>bs', '<cmd>split<CR>', { desc = 'Split Buffer' })
 vim.keymap.set('n', '<leader>bv', '<cmd>vsplit<CR>', { desc = 'Vertically split Buffer' })
 
--- Buffer navigation
+-- Buffer management
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next Buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous Buffer' })
 vim.keymap.set('n', '<leader>bd', '<cmd>%bd<CR>', { desc = 'Clear Buffers' })
+
+-- Session management
+vim.keymap.set('n', '<leader>sw', function()
+  vim.ui.input({ prompt = 'Session name: ' }, function(input)
+    if input and input ~= '' then
+      MiniSessions.write(input)
+    end
+  end)
+end, { desc = 'Write Session' })
+vim.keymap.set('n', '<leader>ss', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Select Session' })
+vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', { desc = 'Delete Session' })
 
 -- [[ Toggles ]]
 vim.keymap.set('n', '<leader>tf', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Toggle Files' })
@@ -72,7 +84,6 @@ vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Togg
 
 -- [[ Finders / Pickers ]]
 vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<CR>', { desc = 'Find Files' })
-vim.keymap.set('n', '<leader>fs', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Find Session' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<CR>', { desc = 'Find Help' })
 vim.keymap.set('n', '<leader>fb', '<cmd>Pick buffers<CR>', { desc = 'Find Buffers' })
 vim.keymap.set('n', '<leader>f/', '<cmd>Pick grep pattern="" globs={"%"}<CR>', { desc = 'Find text in current buffer' })

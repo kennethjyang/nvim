@@ -5,8 +5,9 @@ return {
   opts = {
     spec = {
       { '<leader>b', group = 'Buffer' },
-      { '<leader>t', group = 'Toggle' },
       { '<leader>f', group = 'Find' },
+      { '<leader>s', group = 'Sessions' },
+      { '<leader>t', group = 'Toggle' },
     },
   },
   keys = {
