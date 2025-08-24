@@ -9,5 +9,13 @@ return {
     else
       vim.g.vimtex_view_method = 'zathura'
     end
+
+    -- Configure compiler
+    vim.g.vimtex_compiler_latexmk = {
+      aux_dir = '.aux',
+      out_dir = '.out'
+    }
+    vim.g.vimtex_compiler_clean_paths = { '.aux', '.out' }
+    vim.g.vimtex_view_general_options = '.out/@pdf'
   end
 }
