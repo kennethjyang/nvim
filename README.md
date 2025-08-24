@@ -41,4 +41,4 @@ Only install what you want to use (use Mason)
 - LaTeX
     - `texlab`
     - `skim` (PDF viewer for macOS)
-    - `SumatraPDF` (PDF viewer for Windows)
+    - `SumatraPDF` (PDF viewer for Windows, must add to PATH)
