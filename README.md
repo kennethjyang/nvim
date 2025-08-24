@@ -25,8 +25,9 @@ Windows
 
 - `neovim` 0.11+
 
-### Useful CLI tools
+### Useful (optional) tools
 
+- Neovide (GUI host for neovim)
 - `ripgrep`
 
 ### LSPs
@@ -40,5 +41,5 @@ Only install what you want to use. Most can be installed through Mason but some 
     - `ltex-ls-plus`
 - LaTeX
     - `texlab`
-    - `skim` (PDF viewer for macOS)
-    - `SumatraPDF` (PDF viewer for Windows, must add to PATH)
+    - Skim (PDF viewer for macOS)
+    - SumatraPDF (PDF viewer for Windows, must add to PATH)

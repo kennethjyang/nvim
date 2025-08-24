@@ -20,22 +20,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- System keyboard paste for Neovide.
-if vim.g.neovide then
-  -- macOS
-  vim.keymap.set('v', '<D-c>', '"+y')         -- Copy
-  vim.keymap.set('n', '<D-v>', '"+P')         -- Paste normal mode
-  vim.keymap.set('v', '<D-v>', '"+P')         -- Paste visual mode
-  vim.keymap.set('c', '<D-v>', '<C-R>+')      -- Paste command mode
-  vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
-
-  -- Windows
-  vim.keymap.set('v', '<C-c>', '"+y')         -- Copy
-  vim.keymap.set('v', '<C-v>', '"+P')         -- Paste visual mode
-  vim.keymap.set('c', '<C-v>', '<C-R>+')      -- Paste command mode
-  vim.keymap.set('i', '<C-v>', '<ESC>l"+Pli') -- Paste insert mode
-end
-
 -- Neovide scaling
 if vim.g.neovide then
   local change_scale_factor = function(delta)
@@ -103,18 +87,24 @@ end, { desc = 'Write Session' })
 vim.keymap.set('n', '<leader>ss', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Select Session' })
 vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', { desc = 'Delete Session' })
 
+-- [[ Open Views ]]
+
 -- Diagnostic
-vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Show Diagnostics' })
+vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Oopen Diagnostics' })
 
 -- Lazy
-vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Show Lazy' })
+vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Open Lazy' })
 
 -- Mason
-vim.keymap.set('n', '<leader>m', '<cmd>Mason<CR>', { desc = 'Show Mason' })
+vim.keymap.set('n', '<leader>m', '<cmd>Mason<CR>', { desc = 'Open Mason' })
+
+-- File picker
+vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open Explorer' })
+
+-- LazyGit
+vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>', { desc = 'Open LazyGit' })
 
 -- [[ Toggles ]]
-vim.keymap.set('n', '<leader>tf', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Toggle Files' })
-vim.keymap.set('n', '<leader>tg', '<cmd>LazyGit<CR>', { desc = 'Toggle LazyGit' })
 vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle Terminal (horizontal)' })
 vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = 'Toggle Terminal (vertical)' })
 vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Toggle Zoom" })

@@ -6,6 +6,7 @@ require 'config.lazy'
 require 'config.options'
 require 'config.lsp'
 require 'config.keymaps'
+require 'config.local'
 
 -- If started in Neovide, prompt to select a session
 if vim.g.neovide then

@@ -4,16 +4,13 @@ return {
   -- tag = "v2.15", -- uncomment to pin to a specific release
   init = function()
     -- VimTeX configuration goes here, e.g.
-    if vim.fn.executable('skim') == 1 then
-      vim.g.vimtex_view_method = 'skim'
-    end
 
     -- Configure compiler
     vim.g.vimtex_compiler_latexmk = {
       aux_dir = '.aux',
-      out_dir = '.out'
+      out_dir = '.out',
+      options = { '-pdf', '-synctex=1' }
     }
     vim.g.vimtex_compiler_clean_paths = { '.aux', '.out' }
-    -- vim.g.vimtex_view_general_options = '.out/@pdf'
   end
 }
