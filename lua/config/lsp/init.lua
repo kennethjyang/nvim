@@ -1,14 +1,5 @@
--- [[ LSPs ]]
+-- [[ LSP configs ]]
 
--- Lua
-vim.lsp.enable('lua_ls')
-
--- Nix
-vim.lsp.enable('nixd')
-
--- Markdown
-vim.lsp.enable('marksman')
-vim.lsp.enable('ltex_plus')
 vim.lsp.config('ltex_plus', {
   settings = {
     ltex = {
@@ -16,9 +7,6 @@ vim.lsp.config('ltex_plus', {
     }
   }
 })
-
--- LaTeX
-vim.lsp.enable('texlab')
 
 -- [[ Autocmds ]]
 

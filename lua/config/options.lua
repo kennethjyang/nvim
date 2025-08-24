@@ -73,6 +73,11 @@ vim.o.smartcase = true
 -- Mouse.
 vim.o.mouse = 'a'
 
+-- Use system clipboard
+vim.schedule(function()
+  vim.o.clipboard = 'unnamedplus'
+end)
+
 -- Configure how new splits should be opened.
 vim.o.splitright = true
 vim.o.splitbelow = true

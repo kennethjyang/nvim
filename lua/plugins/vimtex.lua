@@ -6,6 +6,8 @@ return {
     -- VimTeX configuration goes here, e.g.
     if vim.fn.executable('skim') then
       vim.g.vimtex_view_method = 'skim'
+    elseif vim.fn.executable('%localappdata%\\SumatraPDF\\SumatraPDF.exe') then
+      vim.g.vimtex_view_method = '%localappdata%\\SumatraPDF\\SumatraPDF.exe'
     else
       vim.g.vimtex_view_method = 'zathura'
     end

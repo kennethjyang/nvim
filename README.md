@@ -31,7 +31,7 @@ Windows
 
 ### LSPs
 
-Only install what you want to use
+Only install what you want to use (use Mason)
 
 - `lua-language-server`
 - `nixd` (for macOS only)
@@ -40,4 +40,5 @@ Only install what you want to use
     - `ltex-ls-plus`
 - LaTeX
     - `texlab`
-    - `skim` (a compatible viewer)
+    - `skim` (PDF viewer for macOS)
+    - `SumatraPDF` (PDF viewer for Windows)

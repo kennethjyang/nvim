@@ -22,16 +22,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- System keyboard paste for Neovide.
 if vim.g.neovide then
+  -- macOS
   vim.keymap.set('v', '<D-c>', '"+y')         -- Copy
   vim.keymap.set('n', '<D-v>', '"+P')         -- Paste normal mode
   vim.keymap.set('v', '<D-v>', '"+P')         -- Paste visual mode
   vim.keymap.set('c', '<D-v>', '<C-R>+')      -- Paste command mode
   vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
+
+  -- Windows
+  vim.keymap.set('v', '<C-c>', '"+y')         -- Copy
+  vim.keymap.set('v', '<C-v>', '"+P')         -- Paste visual mode
+  vim.keymap.set('c', '<C-v>', '<C-R>+')      -- Paste command mode
+  vim.keymap.set('i', '<C-v>', '<ESC>l"+Pli') -- Paste insert mode
 end
 
 -- Neovide scaling
 if vim.g.neovide then
-  vim.g.neovide_scale_factor = 1.0
   local change_scale_factor = function(delta)
     vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
   end
@@ -99,6 +105,12 @@ vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', 
 
 -- Diagnostic
 vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Show Diagnostics' })
+
+-- Lazy
+vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Show Lazy' })
+
+-- Mason
+vim.keymap.set('n', '<leader>m', '<cmd>Mason<CR>', { desc = 'Show Mason' })
 
 -- [[ Toggles ]]
 vim.keymap.set('n', '<leader>tf', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Toggle Files' })
