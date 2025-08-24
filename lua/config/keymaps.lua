@@ -90,7 +90,7 @@ vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', 
 -- [[ Open Views ]]
 
 -- Diagnostic
-vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Oopen Diagnostics' })
+vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Open Diagnostics' })
 
 -- Lazy
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Open Lazy' })

@@ -4,12 +4,13 @@ return {
   event = "VeryLazy",
   opts = {
     spec = {
-      { '<leader>b', group = 'Buffer' },
-      { '<leader>f', group = 'Find' },
-      { '<leader>g', group = 'Git' },
-      { 'gr',        group = 'LSP actions' },
-      { '<leader>s', group = 'Sessions' },
-      { '<leader>t', group = 'Toggle' },
+      { '<leader>b',      group = 'Buffer' },
+      { '<leader>f',      group = 'Find' },
+      { '<leader>g',      group = 'Git' },
+      { 'gr',             group = 'LSP actions' },
+      { '<localleader>l', group = 'VimTex actions' },
+      { '<leader>s',      group = 'Sessions' },
+      { '<leader>t',      group = 'Toggle' },
     },
   },
   keys = {
