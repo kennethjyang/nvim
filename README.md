@@ -31,7 +31,7 @@ Windows
 
 ### LSPs
 
-Only install what you want to use (use Mason)
+Only install what you want to use. Most can be installed through Mason but some are external tools that need to be downloaded separately.
 
 - `lua-language-server`
 - `nixd` (for macOS only)
