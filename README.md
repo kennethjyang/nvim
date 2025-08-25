@@ -29,6 +29,7 @@ Windows
 
 - Neovide (GUI host for neovim)
 - `ripgrep`
+- Write per-machine configurations into the `lua/config/local.lua` file. They will be run last and not tracked in git.
 
 ### LSPs
 
