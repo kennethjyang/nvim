@@ -8,6 +8,14 @@ vim.lsp.config('ltex_plus', {
   }
 })
 
+vim.lsp.config('tinymist', {
+  settings = {
+    formatterMode = 'typstyle',
+    exportPdf = 'onType',
+    semanticTokens = 'disable'
+  }
+})
+
 -- [[ Autocmds ]]
 
 vim.api.nvim_create_autocmd('LspAttach', {

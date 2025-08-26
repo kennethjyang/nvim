@@ -31,16 +31,22 @@ Windows
 - `ripgrep`
 - Write per-machine configurations into the `lua/config/local.lua` file. They will be run last and not tracked in git.
 
-### LSPs
+### Languages
 
-Only install what you want to use. Most can be installed through Mason but some are external tools that need to be downloaded separately.
+Only install what you want to use. Most LSPs and formatters can be installed via Mason while external tools should be installed separately.
 
-- `lua-language-server`
+- Lua
+    - `lua-language-server`
+    - `stylua`
 - `nixd` (for macOS only)
 - Markdown
     - `marksman`
     - `ltex-ls-plus`
 - LaTeX
+    - Some LaTeX distribution like MiKTeX (Windows) or MacTex (macOS)
     - `texlab`
     - Skim (PDF viewer for macOS)
     - SumatraPDF (PDF viewer for Windows, must add to PATH)
+- Typst
+    - Typst
+    - `tinymist`

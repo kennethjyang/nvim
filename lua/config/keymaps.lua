@@ -3,11 +3,11 @@
 -- Save and quit
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Write' })
 vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Quit' })
-vim.keymap.set('n', '<leader>x', '<cmd>x<CR>', { desc = 'Write & Quit' })
+vim.keymap.set('n', '<leader>x', '<cmd>x<CR>', { desc = 'Write & quit' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
@@ -27,27 +27,21 @@ if vim.g.neovide then
   end
   vim.keymap.set("n", "<C-=>", function()
     change_scale_factor(1.25)
-  end)
+  end, { desc = 'Scale up Neovide UI' })
   vim.keymap.set("n", "<C-->", function()
     change_scale_factor(1 / 1.25)
-  end)
+  end, { desc = 'Scale down Neovide UI' })
   vim.keymap.set("n", "<C-0>", function()
     vim.g.neovide_scale_factor = 1.0
-  end)
+  end, { desc = 'Reset Neovide UI scale' })
 end
-
--- Allow clipboard copy paste in neovim
-vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 
 
 -- [[ Editor Navigation ]]
 
 -- Navigate using visual lines
-vim.keymap.set('n', 'j', 'gj')
-vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set('n', 'j', 'gj', { desc = 'Navigate down by visual line' })
+vim.keymap.set('n', 'k', 'gk', { desc = 'Navigate up by visual line' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -67,14 +61,18 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Make splits
-vim.keymap.set('n', '<leader>bs', '<cmd>split<CR>', { desc = 'Split Buffer' })
-vim.keymap.set('n', '<leader>bv', '<cmd>vsplit<CR>', { desc = 'Vertically split Buffer' })
+vim.keymap.set('n', '<leader>bs', '<cmd>split<CR>', { desc = 'Split buffer horizontally' })
+vim.keymap.set('n', '<leader>bv', '<cmd>vsplit<CR>', { desc = 'Split buffer vertically' })
 
 -- Buffer management
-vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next Buffer' })
-vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous Buffer' })
-vim.keymap.set('n', '<leader>ba', '<cmd>b#<CR>', { desc = 'Alternate Buffer' })
-vim.keymap.set('n', '<leader>bd', '<cmd>%bd<CR>', { desc = 'Clear Buffers' })
+vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous buffer' })
+vim.keymap.set('n', '<leader>ba', '<cmd>b#<CR>', { desc = 'Alternate buffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>%bd<CR>', { desc = 'Clear buffers' })
+
+vim.keymap.set('n', '<leader>nn', '<cmd>new<CR>', { desc = 'New empty buffer in split (horizontal)' })
+vim.keymap.set('n', '<leader>nv', '<cmd>vne<CR>', { desc = 'New empty buffer in vertical split (vertical)' })
+vim.keymap.set('n', '<leader>ne', '<cmd>ene<CR>', { desc = 'New empty buffer in current buffer' })
 
 -- Session management
 vim.keymap.set('n', '<leader>sw', function()
@@ -83,14 +81,14 @@ vim.keymap.set('n', '<leader>sw', function()
       MiniSessions.write(input)
     end
   end)
-end, { desc = 'Write Session' })
-vim.keymap.set('n', '<leader>ss', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Select Session' })
-vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', { desc = 'Delete Session' })
+end, { desc = 'Write session' })
+vim.keymap.set('n', '<leader>ss', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Select session' })
+vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', { desc = 'Delete session' })
 
 -- [[ Open Views ]]
 
 -- Diagnostic
-vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Open Diagnostics' })
+vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Open diagnostics' })
 
 -- Lazy
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Open Lazy' })
@@ -99,15 +97,15 @@ vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Open Lazy' })
 vim.keymap.set('n', '<leader>m', '<cmd>Mason<CR>', { desc = 'Open Mason' })
 
 -- File picker
-vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open Explorer' })
+vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open explorer' })
 
 -- LazyGit
 vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>', { desc = 'Open LazyGit' })
 
 -- [[ Toggles ]]
-vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle Terminal (horizontal)' })
-vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = 'Toggle Terminal (vertical)' })
-vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Toggle Zoom" })
+vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle terminal (horizontal)' })
+vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = 'Toggle terminal (vertical)' })
+vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Toggle zoom" })
 vim.keymap.set('n', '<leader>tl', function()
   if vim.diagnostic.config().virtual_lines then
     vim.diagnostic.config({ virtual_lines = false })
@@ -117,12 +115,12 @@ vim.keymap.set('n', '<leader>tl', function()
 end, { desc = 'Toggle diagnostic virtual_lines' })
 
 -- [[ Finders / Pickers ]]
-vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<CR>', { desc = 'Find Files' })
-vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<CR>', { desc = 'Find Help' })
-vim.keymap.set('n', '<leader>fb', '<cmd>Pick buffers<CR>', { desc = 'Find Buffers' })
+vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<CR>', { desc = 'Find help' })
+vim.keymap.set('n', '<leader>fb', '<cmd>Pick buffers<CR>', { desc = 'Find buffers' })
 vim.keymap.set('n', '<leader>f/', '<cmd>Pick grep pattern="" globs={"%"}<CR>', { desc = 'Find text in current buffer' })
 vim.keymap.set('n', '<leader>fp', '<cmd>Pick grep pattern=""<CR>', { desc = 'Find text in project' })
-vim.keymap.set('n', '<leader>fr', '<cmd>Pick resume<CR>', { desc = 'Resume Finding' })
+vim.keymap.set('n', '<leader>fr', '<cmd>Pick resume<CR>', { desc = 'Resume picker' })
 
 
 -- [[ Editing Shortcuts ]]
