@@ -50,3 +50,4 @@ Only install what you want to use. Most LSPs and formatters can be installed via
 - Typst
     - Typst
     - `tinymist`
+    - `typstyle`
