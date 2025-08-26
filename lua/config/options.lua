@@ -1,5 +1,8 @@
 -- [[ Editor Appearance ]]
 
+-- Theme
+vim.cmd [[colorscheme tokyonight]]
+
 -- Fonts.
 vim.g.have_nerd_font = true
 
@@ -39,7 +42,6 @@ vim.o.showmode = false
 
 -- Neovide options
 if vim.g.neovide then
-  vim.cmd [[colorscheme tokyonight]]
   vim.o.guifont = "JetBrainsMono Nerd Font"
   vim.g.neovide_theme = 'auto'
 end
