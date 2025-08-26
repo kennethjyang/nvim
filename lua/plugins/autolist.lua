@@ -22,8 +22,6 @@ return {
     { '<C-b>',   '<cmd>AutolistNewBullet<CR>',         mode = 'i' },
     { 'o',       'o<cmd>AutolistNewBullet<CR>' },
     { 'O',       'O<cmd>AutolistNewBulletBefore<CR>' },
-    { '<CR>',    '<cmd>AutolistToggleCheckbox<cr><CR>' },
-    { '>>',      '>><cmd>AutolistRecalculate<CR>' },
-    { '<<',      '<<<cmd>AutolistRecalculate<CR>' }
+    { '<CR>',    '<cmd>AutolistToggleCheckbox<cr><CR>' }
   }
 }

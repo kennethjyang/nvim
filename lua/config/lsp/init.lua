@@ -1,20 +1,7 @@
 -- [[ LSP configs ]]
 
-vim.lsp.config('ltex_plus', {
-  settings = {
-    ltex = {
-      checkFrequency = 'save'
-    }
-  }
-})
-
-vim.lsp.config('tinymist', {
-  settings = {
-    formatterMode = 'typstyle',
-    exportPdf = 'onType',
-    semanticTokens = 'disable'
-  }
-})
+require 'config.lsp.ltex_plus'
+require 'config.lsp.tinymist'
 
 -- [[ Autocmds ]]
 
