@@ -1,7 +1,6 @@
 -- [[ LSP configs ]]
 
 require 'config.lsp.ltex_plus'
-require 'config.lsp.tinymist'
 
 -- [[ Autocmds ]]
 

@@ -14,5 +14,6 @@ return {
     require('mini.misc').setup()
     require('mini.statusline').setup()
     require('mini.diff').setup()
+    require('mini.bracketed').setup()
   end,
 }
