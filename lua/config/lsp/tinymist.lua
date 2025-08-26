@@ -5,9 +5,6 @@ vim.lsp.config('tinymist', {
     outputPath = '$root/.out/$dir/$name',
     lint = {
       enabled = true
-    },
-    preview = {
-      invertColors = 'auto'
     }
   },
   on_attach = function(client, bufnr)
