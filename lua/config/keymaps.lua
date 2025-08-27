@@ -132,7 +132,3 @@ vim.keymap.set('n', 'Y', 'y$', { desc = 'Yank to end of line' })
 -- Better indenting in visual mode
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
-
--- Git Hunk operations
-vim.keymap.set('n', '<leader>gd', '<cmd>Gitsigns reset_hunk<CR>', { desc = 'Reset Git hunk' })
-vim.keymap.set('n', '<leader>gp', '<cmd>Gitsigns preview_hunk<CR>', { desc = 'Preview Git hunk' })
