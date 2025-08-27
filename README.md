@@ -44,6 +44,7 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - `ltex-ls-plus`
 - LaTeX
     - Some LaTeX distribution like MiKTeX (Windows) or MacTex (macOS)
+        - MiKTeX needs Perl installed as well
     - `texlab`
     - Skim (PDF viewer for macOS)
     - SumatraPDF (PDF viewer for Windows, must add to PATH)

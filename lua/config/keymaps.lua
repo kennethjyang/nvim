@@ -115,7 +115,8 @@ vim.keymap.set('n', '<leader>tl', function()
 end, { desc = 'Toggle diagnostic virtual_lines' })
 
 -- [[ Finders / Pickers ]]
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope git_files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', '<leader>fa', '<cmd>Telescope find_files<CR>', { desc = 'Find all files' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'Find help' })
 vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Find buffers' })
 vim.keymap.set('n', '<leader>f/', '<cmd>Telescope current_buffer_fuzzy_find<CR>',
