@@ -34,9 +34,6 @@ vim.o.termguicolors = true
 -- Highlight matching brackets.
 vim.o.showmatch = true
 
--- Replace vim.ui.select with MiniPick
-vim.ui.select = MiniPick.ui_select
-
 -- Don't show mode since it's already in the statusline
 vim.o.showmode = false
 
@@ -83,9 +80,6 @@ end)
 -- Configure how new splits should be opened.
 vim.o.splitright = true
 vim.o.splitbelow = true
-
--- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
 
 -- Confirmation dialog for unsaved changes and such.
 vim.o.confirm = true

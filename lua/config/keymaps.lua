@@ -115,12 +115,13 @@ vim.keymap.set('n', '<leader>tl', function()
 end, { desc = 'Toggle diagnostic virtual_lines' })
 
 -- [[ Finders / Pickers ]]
-vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<CR>', { desc = 'Find files' })
-vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<CR>', { desc = 'Find help' })
-vim.keymap.set('n', '<leader>fb', '<cmd>Pick buffers<CR>', { desc = 'Find buffers' })
-vim.keymap.set('n', '<leader>f/', '<cmd>Pick grep pattern="" globs={"%"}<CR>', { desc = 'Find text in current buffer' })
-vim.keymap.set('n', '<leader>fp', '<cmd>Pick grep pattern=""<CR>', { desc = 'Find text in project' })
-vim.keymap.set('n', '<leader>fr', '<cmd>Pick resume<CR>', { desc = 'Resume picker' })
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'Find help' })
+vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Find buffers' })
+vim.keymap.set('n', '<leader>f/', '<cmd>Telescope current_buffer_fuzzy_find<CR>',
+  { desc = 'Find text in current buffer' })
+vim.keymap.set('n', '<leader>fp', '<cmd>Telescope live_grep<CR>', { desc = 'Find text in project' })
+vim.keymap.set('n', '<leader>fr', '<cmd>Telescope resume<CR>', { desc = 'Resume picker' })
 
 
 -- [[ Editing Shortcuts ]]

@@ -9,8 +9,3 @@ require 'config.keymaps'
 
 -- Run local config (if it exists)
 pcall(require, 'config.local')
-
--- If started in Neovide, prompt to select a session
-if vim.g.neovide then
-  MiniSessions.select()
-end

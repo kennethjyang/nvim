@@ -9,7 +9,6 @@ return {
     require('mini.sessions').setup({
       autowrite = true
     })
-    require('mini.pick').setup()
     require('mini.extra').setup()
     require('mini.misc').setup()
     require('mini.statusline').setup()
