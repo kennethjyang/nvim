@@ -27,7 +27,7 @@ Windows
 
 ### Useful (optional) tools
 
-- Neovide (GUI host for neovim)
+- Neovide (GUI host for Neovim)
 - `ripgrep`
 - Write per-machine configurations into the `lua/config/local.lua` file. They will be run last and not tracked in git.
 
