@@ -1,4 +1,3 @@
--- Keymap hints
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",

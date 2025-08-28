@@ -1,17 +1,17 @@
 -- INFO: Editor Behavior.
 
--- Save and quit
+-- Save and quit.
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Write' })
 vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Quit' })
 vim.keymap.set('n', '<leader>x', '<cmd>x<CR>', { desc = 'Write & quit' })
 
--- Clear highlights on search when pressing <Esc> in normal mode
---  See `:help hlsearch`
+-- Clear highlights on search when pressing <Esc> in normal mode.
+--  See `:help hlsearch`.
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
 
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.hl.on_yank()`
+-- Highlight when yanking (copying) text.
+--  Try it with `yap` in normal mode.
+--  See `:help vim.hl.on_yank()`.
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
@@ -20,7 +20,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- Neovide scaling
+-- Neovide scaling.
 if vim.g.neovide then
   local change_scale_factor = function(delta)
     vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
@@ -37,9 +37,9 @@ if vim.g.neovide then
 end
 
 
--- [[ Editor Navigation ]]
+-- INFO: Editor Navigation.
 
--- Navigate using visual lines
+-- Navigate using visual lines.
 vim.keymap.set('n', 'j', 'gj', { desc = 'Navigate down by visual line' })
 vim.keymap.set('n', 'k', 'gk', { desc = 'Navigate up by visual line' })
 
@@ -52,19 +52,19 @@ vim.keymap.set('n', 'k', 'gk', { desc = 'Navigate up by visual line' })
 vim.keymap.set('t', '<C-Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
+--  Use CTRL+<hjkl> to switch between windows.
 --
---  See `:help wincmd` for a list of all window commands
+--  See `:help wincmd` for a list of all window commands.
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Make splits
+-- Make splits.
 vim.keymap.set('n', '<leader>bs', '<cmd>split<CR>', { desc = 'Split buffer horizontally' })
 vim.keymap.set('n', '<leader>bv', '<cmd>vsplit<CR>', { desc = 'Split buffer vertically' })
 
--- Buffer management
+-- Buffer management.
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '<leader>ba', '<cmd>b#<CR>', { desc = 'Alternate buffer' })
@@ -74,7 +74,7 @@ vim.keymap.set('n', '<leader>nn', '<cmd>new<CR>', { desc = 'New empty buffer in 
 vim.keymap.set('n', '<leader>nv', '<cmd>vne<CR>', { desc = 'New empty buffer in vertical split (vertical)' })
 vim.keymap.set('n', '<leader>ne', '<cmd>ene<CR>', { desc = 'New empty buffer in current buffer' })
 
--- Session management
+-- Session management.
 vim.keymap.set('n', '<leader>sw', function()
   vim.ui.input({ prompt = 'Session name: ' }, function(input)
     if input and input ~= '' then
@@ -85,24 +85,27 @@ end, { desc = 'Write session' })
 vim.keymap.set('n', '<leader>ss', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Select session' })
 vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', { desc = 'Delete session' })
 
--- [[ Open Views ]]
+-- Zoxide.
+vim.keymap.set('n', '<leader>z', '<cmd>Telescope zoxide list<CR>', { desc = 'Change Directory (Zoxide)' })
 
--- Diagnostic
+-- INFO: Open Views.
+
+-- Diagnostic.
 vim.keymap.set('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Open diagnostics' })
 
--- Lazy
+-- Lazy.
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Open Lazy' })
 
--- Mason
+-- Mason.
 vim.keymap.set('n', '<leader>m', '<cmd>Mason<CR>', { desc = 'Open Mason' })
 
--- File picker
+-- File picker.
 vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open explorer' })
 
--- LazyGit
+-- LazyGit.
 vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>', { desc = 'Open LazyGit' })
 
--- [[ Toggles ]]
+-- INFO: Toggles.
 vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle terminal (horizontal)' })
 vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = 'Toggle terminal (vertical)' })
 vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Toggle zoom" })
@@ -114,7 +117,7 @@ vim.keymap.set('n', '<leader>tl', function()
   end
 end, { desc = 'Toggle diagnostic virtual_lines' })
 
--- [[ Finders / Pickers ]]
+-- INFO: Finders / Pickers.
 vim.keymap.set('n', '<leader>ff', "<cmd>lua require('config.telescope-project-files').project_files()<CR>",
   { desc = 'Find files' })
 vim.keymap.set('n', '<leader>fa', '<cmd>Telescope find_files<CR>', { desc = 'Find all files' })
@@ -126,11 +129,11 @@ vim.keymap.set('n', '<leader>fp', '<cmd>Telescope live_grep<CR>', { desc = 'Find
 vim.keymap.set('n', '<leader>fr', '<cmd>Telescope resume<CR>', { desc = 'Resume picker' })
 
 
--- [[ Editing Shortcuts ]]
+-- INFO: Editing Shortcuts.
 
--- Y to EOL
+-- Y to EOL.
 vim.keymap.set('n', 'Y', 'y$', { desc = 'Yank to end of line' })
 
--- Better indenting in visual mode
+-- Better indenting in visual mode.
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })

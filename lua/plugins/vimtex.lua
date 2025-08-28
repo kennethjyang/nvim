@@ -5,7 +5,7 @@ return {
   init = function()
     -- VimTeX configuration goes here, e.g.
 
-    -- Configure compiler
+    -- Configure compiler.
     vim.g.vimtex_compiler_latexmk = {
       aux_dir = '.aux',
       out_dir = '.out',

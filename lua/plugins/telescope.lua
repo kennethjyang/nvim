@@ -20,6 +20,12 @@ return {
 
     -- Useful for getting pretty icons, but requires a Nerd Font.
     { 'nvim-tree/nvim-web-devicons' },
+    {
+      'jvgrootveld/telescope-zoxide',
+      dependencies = {
+        'nvim-lua/popup.nvim'
+      }
+    }
   },
   config = function()
     -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -44,6 +50,7 @@ return {
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
+    pcall(require('telescope').load_extension, 'zoxide')
 
     -- -- Slightly advanced example of overriding default behavior and theme
     -- vim.keymap.set('n', '<leader>/', function()
