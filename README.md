@@ -48,3 +48,7 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - `texlab`
     - Skim (PDF viewer for macOS)
     - SumatraPDF (PDF viewer for Windows, must add to PATH)
+- Typst
+    - Typst
+    - `tinymist`
+    - `typstyle`

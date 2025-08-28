@@ -1,4 +1,4 @@
--- [[ Editor Behavior ]]
+-- INFO: Editor Behavior.
 
 -- Save and quit
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Write' })
@@ -115,7 +115,7 @@ vim.keymap.set('n', '<leader>tl', function()
 end, { desc = 'Toggle diagnostic virtual_lines' })
 
 -- [[ Finders / Pickers ]]
-vim.keymap.set('n', '<leader>ff', "<cmd>lua require('plugins.telescope-project-files').project_files()<CR>",
+vim.keymap.set('n', '<leader>ff', "<cmd>lua require('config.telescope-project-files').project_files()<CR>",
   { desc = 'Find files' })
 vim.keymap.set('n', '<leader>fa', '<cmd>Telescope find_files<CR>', { desc = 'Find all files' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'Find help' })

@@ -1,16 +1,16 @@
--- [[ LSP configs ]]
+-- INFO: LSP configs.
 
 require 'config.lsp.ltex_plus'
 require 'config.lsp.tinymist'
 
--- [[ Autocmds ]]
+-- INFO: Autocmds.
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
   callback = function(event)
     local client = vim.lsp.get_client_by_id(event.data.client_id)
 
-    -- Highlight references under cursor
+    -- Highlight references under cursor.
     if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf) then
       local highlight_augroup = vim.api.nvim_create_augroup('lsp-highlight', { clear = false })
       vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
@@ -36,14 +36,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
--- Diagnostics
+-- INFO: Diagnostics.
 vim.diagnostic.config({
-  -- Use the default configuration
-  -- virtual_lines = true
-
-  -- Alternatively, customize specific options
+  -- Only show virtual line diagnostics for the current cursor line.
   virtual_lines = {
-    -- Only show virtual line diagnostics for the current cursor line
     current_line = true,
   },
 })

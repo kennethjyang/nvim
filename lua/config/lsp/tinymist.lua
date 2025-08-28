@@ -8,6 +8,7 @@ vim.lsp.config('tinymist', {
     }
   },
   on_attach = function(client, bufnr)
+    -- Add keymaps to mark the main file.
     vim.keymap.set('n', '<localleader>tp', function()
       client:exec_cmd({
         title = 'pin',

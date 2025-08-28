@@ -1,6 +1,6 @@
--- [[ Editor Appearance ]]
+-- INFO: Editor Appearance.
 
--- Theme
+-- Theme.
 vim.cmd [[colorscheme tokyonight]]
 
 -- Fonts.
@@ -34,18 +34,21 @@ vim.o.termguicolors = true
 -- Highlight matching brackets.
 vim.o.showmatch = true
 
--- Don't show mode since it's already in the statusline
+-- Don't show mode since it's already in the statusline.
 vim.o.showmode = false
 
--- Neovide options
+-- Conceal markup text.
+vim.o.conceallevel = 2
+
+-- Neovide options.
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font"
   vim.g.neovide_theme = 'auto'
 end
 
--- [[ Editing Features ]]
+-- INFO: Editing Features.
 
--- Indentation
+-- Indentation.
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
@@ -53,25 +56,24 @@ vim.o.smartindent = true
 vim.o.autoindent = true
 vim.o.breakindent = true
 
--- Folding
+-- Folding.
 vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldlevel = 99
 
--- [[ Editor Behavior ]]
+-- INFO: Editor Behavior.
 
 -- Save undo history.
--- vim.g.transparency = 1.0
 vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term.
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
--- Mouse.
+-- Use mouse to move stuff.
 vim.o.mouse = 'a'
 
--- Use system clipboard
+-- Use system clipboard. Use schedule to avoid startup lag issues.
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
