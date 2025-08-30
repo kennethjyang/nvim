@@ -11,4 +11,9 @@ require 'config.keymaps'
 -- Run local config (if it exists).
 pcall(require, 'config.local')
 
+-- Set startup location to home folder for Neovide
+if vim.g.neovide then
+  vim.cmd [[ autocmd VimEnter * cd ~ ]]
+end
+
 -- Neovide session picker runs after Telescope loads.
