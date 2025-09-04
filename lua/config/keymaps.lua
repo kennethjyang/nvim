@@ -106,6 +106,7 @@ vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open
 vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>', { desc = 'Open LazyGit' })
 
 -- INFO: Toggles.
+vim.keymap.set('n', '<leader>to', '<cmd>Outline<CR>', { desc = 'Toggle outline' })
 vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle terminal (horizontal)' })
 vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = 'Toggle terminal (vertical)' })
 vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Toggle zoom" })
