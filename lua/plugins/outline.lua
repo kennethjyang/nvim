@@ -5,6 +5,12 @@ return {
   opts = {
     outline_window = {
       position = 'left'
+    },
+    providers = {
+      priority = { 'lsp', 'coc', 'markdown', 'norg', 'man', 'treesitter' },
     }
   },
+  dependencies = {
+    'epheien/outline-treesitter-provider.nvim'
+  }
 }
