@@ -74,11 +74,6 @@ return {
     -- vim.keymap.set('n', '<leader>sn', function()
     --   builtin.find_files { cwd = vim.fn.stdpath 'config' }
     -- end, { desc = '[S]earch [N]eovim files' })
-
-    -- If started in Neovide, prompt to select a session
-    if vim.g.neovide then
-      MiniSessions.select()
-    end
   end,
 }
 -- vim: ts=2 sts=2 sw=2 et
