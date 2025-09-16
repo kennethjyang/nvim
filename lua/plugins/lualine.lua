@@ -1,8 +1,7 @@
 local function word_count()
   local count = vim.fn.mode():find('[vV]') and vim.fn.wordcount().visual_words or vim.fn.wordcount().words
-  local label = count > 1 and 'word' or 'words'
 
-  return count .. ' ' .. label
+  return count .. ' W'
 end
 
 local function is_prose()
@@ -15,9 +14,13 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     sections = {
-      lualine_c = { 'filename', 'buffers' },
-      lualine_z = {
+      lualine_c = { 'buffers' },
+      lualine_x = { 'lsp_status', 'filetype' },
+      lualine_y = {
         { word_count, cond = is_prose },
+        'progress'
+      },
+      lualine_z = {
         'location'
       }
     }
