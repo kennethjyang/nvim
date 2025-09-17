@@ -85,9 +85,8 @@ vim.keymap.set('n', '<leader>sw', function()
 end, { desc = 'Write session' })
 vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', { desc = 'Delete session' })
 
--- Zoxide.
-vim.keymap.set('n', '<leader>zz', '<cmd>Telescope zoxide list<CR>', { desc = 'Change Directory (Zoxide)' })
-vim.keymap.set('n', '<leader>zc', '<cmd>cd %:p:h<CR>', { desc = 'Change working director to current file' })
+-- Working directory.
+vim.keymap.set('n', '<leader>c', '<cmd>cd %:p:h<CR>', { desc = 'Change working director to current file' })
 
 -- INFO: Open Views.
 
@@ -108,6 +107,9 @@ vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>', { desc = 'Open LazyGit' })
 
 -- Session picker
 vim.keymap.set('n', '<leader>o', '<cmd>lua MiniSessions.select()<CR>', { desc = 'Open Sessions' })
+
+-- Zoxide.
+vim.keymap.set('n', '<leader>z', '<cmd>Telescope zoxide list<CR>', { desc = 'Change Directory (Zoxide)' })
 
 -- INFO: Toggles.
 vim.keymap.set('n', '<leader>to', '<cmd>Outline<CR>', { desc = 'Toggle outline' })
