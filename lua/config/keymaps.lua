@@ -68,7 +68,7 @@ vim.keymap.set('n', '<leader>bv', '<cmd>vsplit<CR>', { desc = 'Split buffer vert
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '<leader>ba', '<cmd>b#<CR>', { desc = 'Alternate buffer' })
-vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'Clear buffers' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'Delete current buffer' })
 vim.keymap.set('n', '<leader>bc', '<cmd>%bd<CR>', { desc = 'Clear buffers' })
 
 vim.keymap.set('n', '<leader>nn', '<cmd>new<CR>', { desc = 'New empty buffer in split (horizontal)' })
