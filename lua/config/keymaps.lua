@@ -13,27 +13,27 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highl
 --  Try it with `yap` in normal mode.
 --  See `:help vim.hl.on_yank()`.
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-  callback = function()
-    vim.hl.on_yank()
-  end,
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+    callback = function()
+        vim.hl.on_yank()
+    end,
 })
 
 -- Neovide scaling.
 if vim.g.neovide then
-  local change_scale_factor = function(delta)
-    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
-  end
-  vim.keymap.set("n", "<C-=>", function()
-    change_scale_factor(1.25)
-  end, { desc = 'Scale up Neovide UI' })
-  vim.keymap.set("n", "<C-->", function()
-    change_scale_factor(1 / 1.25)
-  end, { desc = 'Scale down Neovide UI' })
-  vim.keymap.set("n", "<C-0>", function()
-    vim.g.neovide_scale_factor = 1.0
-  end, { desc = 'Reset Neovide UI scale' })
+    local change_scale_factor = function(delta)
+        vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+    end
+    vim.keymap.set("n", "<C-=>", function()
+        change_scale_factor(1.25)
+    end, { desc = 'Scale up Neovide UI' })
+    vim.keymap.set("n", "<C-->", function()
+        change_scale_factor(1 / 1.25)
+    end, { desc = 'Scale down Neovide UI' })
+    vim.keymap.set("n", "<C-0>", function()
+        vim.g.neovide_scale_factor = 1.0
+    end, { desc = 'Reset Neovide UI scale' })
 end
 
 
@@ -77,11 +77,11 @@ vim.keymap.set('n', '<leader>ne', '<cmd>ene<CR>', { desc = 'New empty buffer in 
 
 -- Session management.
 vim.keymap.set('n', '<leader>sw', function()
-  vim.ui.input({ prompt = 'Session name: ' }, function(input)
-    if input and input ~= '' then
-      MiniSessions.write(input)
-    end
-  end)
+    vim.ui.input({ prompt = 'Session name: ' }, function(input)
+        if input and input ~= '' then
+            MiniSessions.write(input)
+        end
+    end)
 end, { desc = 'Write session' })
 vim.keymap.set('n', '<leader>sd', '<cmd>lua MiniSessions.select("delete")<CR>', { desc = 'Delete session' })
 
@@ -117,21 +117,23 @@ vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { 
 vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = 'Toggle terminal (vertical)' })
 vim.keymap.set('n', '<leader>tz', '<cmd>lua MiniMisc.zoom()<CR>', { desc = "Toggle zoom" })
 vim.keymap.set('n', '<leader>tl', function()
-  if vim.diagnostic.config().virtual_lines then
-    vim.diagnostic.config({ virtual_lines = false })
-  else
-    vim.diagnostic.config({ virtual_lines = { current_line = true } })
-  end
+    if vim.diagnostic.config().virtual_lines then
+        vim.diagnostic.config({ virtual_lines = false })
+    else
+        vim.diagnostic.config({ virtual_lines = { current_line = true } })
+    end
 end, { desc = 'Toggle diagnostic virtual_lines' })
+vim.keymap.set('n', '<leader>ti', '<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>',
+    { desc = 'Toggle LSP inlay hints' })
 
 -- INFO: Finders / Pickers.
 vim.keymap.set('n', '<leader>ff', "<cmd>lua require('config.telescope-project-files').project_files()<CR>",
-  { desc = 'Find files' })
+    { desc = 'Find files' })
 vim.keymap.set('n', '<leader>fa', '<cmd>Telescope find_files<CR>', { desc = 'Find all files' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'Find help' })
 vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Find buffers' })
 vim.keymap.set('n', '<leader>f/', '<cmd>Telescope current_buffer_fuzzy_find<CR>',
-  { desc = 'Find text in current buffer' })
+    { desc = 'Find text in current buffer' })
 vim.keymap.set('n', '<leader>fp', '<cmd>Telescope live_grep<CR>', { desc = 'Find text in project' })
 vim.keymap.set('n', '<leader>fr', '<cmd>Telescope resume<CR>', { desc = 'Resume picker' })
 
