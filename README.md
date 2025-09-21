@@ -56,3 +56,6 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - Python
     - `basedpyright`
     - `ruff`
+- Rust
+   - Rust (`rustup`) 
+   - `rust-analyzer`
