@@ -1,7 +1,7 @@
 -- INFO: Editor Appearance.
 
 -- Theme.
-vim.cmd [[colorscheme tokyonight]]
+vim.cmd([[colorscheme tokyonight]])
 
 -- Fonts.
 vim.g.have_nerd_font = true
@@ -16,17 +16,17 @@ vim.o.wrap = true
 vim.o.linebreak = true
 
 -- Keep signcolumn on by default.
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 
 -- Display whitespace characters.
 vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions in a split.
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 
 -- Floating window border.
-vim.opt.winborder = 'rounded'
+vim.opt.winborder = "rounded"
 
 -- Enable 24-bit colors.
 vim.o.termguicolors = true
@@ -43,7 +43,7 @@ vim.o.conceallevel = 2
 -- Neovide options.
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font"
-  vim.g.neovide_theme = 'auto'
+  vim.g.neovide_theme = "auto"
 end
 
 -- INFO: Editing Features.
@@ -57,8 +57,8 @@ vim.o.autoindent = true
 vim.o.breakindent = true
 
 -- Folding.
-vim.o.foldmethod = 'expr'
-vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 vim.o.foldlevel = 99
 
 -- INFO: Editor Behavior.
@@ -71,11 +71,11 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Use mouse to move stuff.
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 -- Use system clipboard. Use schedule to avoid startup lag issues.
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+  vim.o.clipboard = "unnamedplus"
 end)
 
 -- Configure how new splits should be opened.
