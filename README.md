@@ -29,7 +29,18 @@ Windows
 
 - Neovide (GUI host for Neovim)
 - `ripgrep`
-- Write per-machine configurations into the `lua/config/local.lua` file. They will be run last and not tracked in git.
+- Write per-machine configurations into the `lua/config/local.lua` file. They will be run last if it exists and not tracked in git.
+
+Example `local.lua`:
+```lua
+-- Configure Neovide scale.
+vim.g.neovide_scale_factor = 0.8
+
+-- Use Powershell in ToggleTerm
+require("toggleterm").setup({
+  shell = "powershell.exe",
+})
+```
 
 ### Languages
 

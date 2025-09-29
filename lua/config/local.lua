@@ -1,7 +1,0 @@
--- Configure Neovide scale.
--- vim.g.neovide_scale_factor = 0.9
---
--- Use Powershell in ToggleTerm
--- require('toggleterm').setup {
---   shell = 'powershell.exe'
--- }
