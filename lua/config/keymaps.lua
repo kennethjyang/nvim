@@ -107,10 +107,10 @@ vim.keymap.set("n", "<leader>e", "<cmd>lua MiniFiles.open()<CR>", { desc = "Open
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open LazyGit" })
 
 -- Session picker
-vim.keymap.set("n", "<leader>o", "<cmd>lua MiniSessions.select()<CR>", { desc = "Open Sessions" })
+-- vim.keymap.set("n", "<leader>o", "<cmd>lua MiniSessions.select()<CR>", { desc = "Open Sessions" })
 
 -- Zoxide.
-vim.keymap.set("n", "<leader>z", "<cmd>Telescope zoxide list<CR>", { desc = "Change Directory (Zoxide)" })
+vim.keymap.set("n", "<leader>o", "<cmd>Telescope zoxide list<CR>", { desc = "Change Directory (Zoxide)" })
 
 -- INFO: Toggles.
 vim.keymap.set("n", "<leader>to", "<cmd>Outline<CR>", { desc = "Toggle outline" })
