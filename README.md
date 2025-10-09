@@ -42,6 +42,19 @@ require("toggleterm").setup({
 })
 ```
 
+- `smear-cursor` can be nice if Neovide or Kitty is unavailable. This file will be ignored.
+
+```lua
+-- lua/plugins/smear-cursor.lua
+
+return {
+  "sphamba/smear-cursor.nvim",
+  opts = {
+    time_interval = 7
+  },
+}
+```
+
 ### Languages
 
 Only install what you want to use. Most LSPs and formatters can be installed via Mason while external tools should be installed separately.
