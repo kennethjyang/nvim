@@ -24,13 +24,13 @@ Windows
 ### Core
 
 - `neovim` 0.11+
+- `ripgrep`
 - `lazygit`
 
 ### Useful (optional) tools
 
 - Neovide (GUI host for Neovim)
 - A font with nerd fonts (like JetBrainsMono NF)
-- `ripgrep`
 - Write per-machine configurations into the `lua/config/local.lua` file. They will be run last if it exists and not tracked in git.
 
 Example `local.lua`:
