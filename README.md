@@ -24,10 +24,12 @@ Windows
 ### Core
 
 - `neovim` 0.11+
+- `lazygit`
 
 ### Useful (optional) tools
 
 - Neovide (GUI host for Neovim)
+- A font with nerd fonts (like JetBrainsMono NF)
 - `ripgrep`
 - Write per-machine configurations into the `lua/config/local.lua` file. They will be run last if it exists and not tracked in git.
 
@@ -81,5 +83,9 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - `basedpyright`
     - `ruff`
 - Rust
-   - Rust (`rustup`) 
-   - `rust-analyzer`
+    - Rust (`rustup`) 
+    - `rust-analyzer`
+- Go
+    - Go
+    - `gopls`
+
