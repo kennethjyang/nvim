@@ -133,6 +133,14 @@ vim.keymap.set(
   "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>",
   { desc = "Toggle LSP inlay hints" }
 )
+vim.keymap.set("n", "<leader>tb", function()
+  if vim.o.background == "dark" then
+    vim.o.background = "light"
+  else
+    vim.o.background = "dark"
+  end
+end, { desc = "Toggle background light/dark" })
+vim.keymap.set("n", "<leader>tx", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Toggle diagnostics" })
 
 -- INFO: Finders / Pickers.
 vim.keymap.set(
