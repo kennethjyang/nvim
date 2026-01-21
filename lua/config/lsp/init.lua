@@ -1,6 +1,7 @@
 -- INFO: LSP configs.
 
 require("config.lsp.ltex_plus")
+require("config.lsp.nixd")
 require("config.lsp.tinymist")
 
 -- INFO: Autocmds.
