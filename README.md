@@ -64,7 +64,9 @@ Only install what you want to use. Most LSPs and formatters can be installed via
 - Lua
     - `lua-language-server`
     - `stylua`
-- `nixd` (for macOS only)
+- Nix (install using nix instead of Mason)
+    - `nixd`
+    - `alejandra`
 - Markdown
     - `marksman`
     - `ltex-ls-plus`
