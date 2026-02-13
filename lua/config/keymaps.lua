@@ -44,6 +44,8 @@ end
 -- Navigate using visual lines.
 vim.keymap.set("n", "j", "gj", { desc = "Navigate down by visual line" })
 vim.keymap.set("n", "k", "gk", { desc = "Navigate up by visual line" })
+vim.keymap.set("n", "H", "g^", { desc = "Navigate to start of visual line" })
+vim.keymap.set("n", "L", "g$", { desc = "Navigate to end of visual line" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
