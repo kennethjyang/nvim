@@ -12,5 +12,6 @@ return {
       options = { '-pdf', '-synctex=1' }
     }
     vim.g.vimtex_compiler_clean_paths = { '.aux', '.out' }
+    vim.g.vimtex_view_method = "zathura"
   end
 }

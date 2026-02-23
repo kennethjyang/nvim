@@ -71,11 +71,10 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - `marksman`
     - `ltex-ls-plus`
 - LaTeX
-    - Some LaTeX distribution like MiKTeX (Windows) or MacTex (macOS)
-        - MiKTeX needs Perl installed as well
+    - Some LaTeX distribution like MiKTeX or MacTex (macOS)
     - `texlab`
-    - Skim (PDF viewer for macOS)
-    - SumatraPDF (PDF viewer for Windows, must add to PATH)
+    - Zathura
+    - Zathura Mu PDF plugin
 - Typst
     - Typst
     - `tinymist`
