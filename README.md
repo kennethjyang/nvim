@@ -38,6 +38,9 @@ Example `local.lua`:
 -- Configure Neovide scale.
 vim.g.neovide_scale_factor = 0.8
 
+-- Use Skim for LaTeX (macOS)
+vim.g.vimtex_view_method = "skim"
+
 -- Use Powershell in ToggleTerm
 require("toggleterm").setup({
   shell = "powershell.exe",
