@@ -73,6 +73,9 @@ vim.o.smartcase = true
 -- Use mouse to move stuff.
 vim.o.mouse = "a"
 
+-- Reduce mouse scrolling speed.
+vim.o.mousescroll = "ver:1"
+
 -- Use system clipboard. Use schedule to avoid startup lag issues.
 vim.schedule(function()
   vim.o.clipboard = "unnamedplus"
