@@ -143,6 +143,7 @@ vim.keymap.set("n", "<leader>tb", function()
   end
 end, { desc = "Toggle background light/dark" })
 vim.keymap.set("n", "<leader>tx", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Toggle diagnostics" })
+vim.keymap.set("n", "<leader>tm", "<cmd>lua MiniMap.toggle()<CR>", {desc="Toggle MiniMap"})
 
 -- INFO: Finders / Pickers.
 vim.keymap.set(
