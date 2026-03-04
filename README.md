@@ -47,7 +47,7 @@ require("toggleterm").setup({
 })
 ```
 
-- `smear-cursor` can be nice if Neovide or Kitty is unavailable. This file will be ignored.
+- `smear-cursor` can be nice if Neovide or Ghostty is unavailable. This file will be ignored.
 
 ```lua
 -- lua/plugins/smear-cursor.lua
