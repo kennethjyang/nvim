@@ -27,7 +27,7 @@ Windows
 - `ripgrep`
 - `lazygit`
 
-### Useful (optional) tools
+### Useful (Optional) Tools
 
 - Neovide (GUI host for Neovim)
 - A font with nerd fonts (like JetBrainsMono NF)

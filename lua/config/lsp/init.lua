@@ -1,6 +1,6 @@
 -- INFO: LSP configs.
 
-require("config.lsp.ltex_plus")
+require("config.lsp.harper")
 require("config.lsp.nixd")
 require("config.lsp.tinymist")
 
