@@ -25,3 +25,4 @@ vim.lsp.config('tinymist', {
     end, { desc = 'Tinymist unpin main', noremap = true })
   end
 })
+vim.lsp.enable('tinymist')

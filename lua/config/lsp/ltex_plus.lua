@@ -8,3 +8,4 @@ vim.lsp.config('ltex_plus', {
     require('ltex-utils').on_attach(bufnr)
   end
 })
+vim.lsp.enable('ltex_plus')
