@@ -76,6 +76,7 @@ Only install what you want to use. Most LSPs and formatters can be installed via
 - LaTeX
     - Some LaTeX distribution like MiKTeX or MacTex (macOS)
     - `texlab`
+    - `tex-fmt`
     - Zathura
     - Zathura Mu PDF plugin (`zathura-pdf-mupdf`)
 - Typst
