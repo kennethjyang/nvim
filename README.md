@@ -77,8 +77,10 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - Some LaTeX distribution like MiKTeX or MacTex (macOS)
     - `texlab`
     - `tex-fmt`
-    - Zathura
-    - Zathura Mu PDF plugin (`zathura-pdf-mupdf`)
+    - Zathura (Linux)
+        - Zathura Mu PDF plugin (`zathura-pdf-mupdf`)
+    - Skim (macOS)
+        - Add `nvim` and `--headless -c "VimtexInverseSearch %line '%file'"` to PDF-TeX Sync settings.
 - Typst
     - Typst
     - `tinymist`
