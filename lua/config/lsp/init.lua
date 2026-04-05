@@ -1,6 +1,7 @@
 -- INFO: LSP configs.
 
 require("config.lsp.harper")
+require("config.lsp.texlab")
 require("config.lsp.nixd")
 require("config.lsp.tinymist")
 
