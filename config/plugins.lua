@@ -1,4 +1,4 @@
--- Actions on plugin update.
+-- INFO: Actions on plugin update.
 vim.api.nvim_create_autocmd("PackChanged", {
   callback = function(ev)
     local name, kind = ev.data.spec.name, ev.data.kind
@@ -11,14 +11,14 @@ vim.api.nvim_create_autocmd("PackChanged", {
   end,
 })
 
--- Plugins.
+-- INFO: Plugins.
 vim.pack.add({
   "https://github.com/nvim-mini/mini.nvim",
 })
 
--- Plugin configuration.
+-- INFO: Plugin configuration.
 
--- mini.nvim
+-- INFO: mini.nvim
 
 -- Editor appearance.
 require("mini.notify").setup()
