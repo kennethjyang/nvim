@@ -3,3 +3,5 @@ vim.g.maplocalleader = ","
 
 -- Pull config files.
 require("config.plugins")
+require("config.options")
+require("config.keymaps")

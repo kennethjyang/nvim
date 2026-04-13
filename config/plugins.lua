@@ -22,11 +22,17 @@ vim.pack.add({
 
 -- Editor appearance.
 require("mini.notify").setup()
-require("mini.diff")
+require("mini.diff").setup()
+require("mini.tabline").setup()
+require("mini.statusline").setup()
+require("mini.indentscope").setup()
+require("mini.trailspace").setup()
+require("mini.cursorword").setup()
 
 -- Editing behavior.
 require("mini.ai").setup()
 require("mini.surround").setup()
+require("mini.bracketed").setup()
 
 -- Editor features.
 require("mini.basics").setup({
@@ -53,3 +59,4 @@ map.setup({
     focusable = true,
   },
 })
+require("mini.misc").setup()
