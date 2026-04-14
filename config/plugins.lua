@@ -31,12 +31,14 @@ vim.pack.add({
 	"https://github.com/lukas-reineke/indent-blankline.nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
+	"https://github.com/folke/todo-comments.nvim",
 
 	-- External tools.
 	"https://github.com/kdheepak/lazygit.nvim",
 	"https://github.com/akinsho/toggleterm.nvim",
 	"https://github.com/hedyhli/outline.nvim",
 	"https://github.com/epheien/outline-treesitter-provider.nvim",
+	"https://github.com/folke/trouble.nvim",
 })
 
 -- INFO: Plugin configuration.
@@ -116,6 +118,7 @@ require("conform").setup({
 -- INFO: Editor appearance.
 require("ibl").setup()
 require("nvim-web-devicons").setup()
+require("todo-comments").setup()
 
 -- INFO: External tools.
 require("toggleterm").setup()
@@ -125,3 +128,4 @@ require("outline").setup({
 		priority = { "lsp", "markdown", "norg", "treesitter" },
 	},
 })
+require("trouble").setup()
