@@ -38,31 +38,31 @@ vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open LazyGit" })
 vim.keymap.set("n", "<leader>to", "<cmd>Outline<CR>", { desc = "Toggle outline" })
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Open terminal (horizontal)" })
 vim.keymap.set(
-	"n",
-	"<leader>tv",
-	"<cmd>ToggleTerm size=60 direction=vertical<CR>",
-	{ desc = "Toggle terminal (vertical)" }
+  "n",
+  "<leader>tv",
+  "<cmd>ToggleTerm size=60 direction=vertical<CR>",
+  { desc = "Toggle terminal (vertical)" }
 )
 vim.keymap.set("n", "<leader>tz", "<cmd>lua MiniMisc.zoom()<CR>", { desc = "Toggle zoom" })
 vim.keymap.set("n", "<leader>tl", function()
-	if vim.diagnostic.config().virtual_lines then
-		vim.diagnostic.config({ virtual_lines = false })
-	else
-		vim.diagnostic.config({ virtual_lines = { current_line = true } })
-	end
+  if vim.diagnostic.config().virtual_lines then
+    vim.diagnostic.config({ virtual_lines = false })
+  else
+    vim.diagnostic.config({ virtual_lines = { current_line = true } })
+  end
 end, { desc = "Toggle diagnostic virtual_lines" })
 vim.keymap.set(
-	"n",
-	"<leader>ti",
-	"<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>",
-	{ desc = "Toggle LSP inlay hints" }
+  "n",
+  "<leader>ti",
+  "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>",
+  { desc = "Toggle LSP inlay hints" }
 )
 vim.keymap.set("n", "<leader>tb", function()
-	if vim.o.background == "dark" then
-		vim.o.background = "light"
-	else
-		vim.o.background = "dark"
-	end
+  if vim.o.background == "dark" then
+    vim.o.background = "light"
+  else
+    vim.o.background = "dark"
+  end
 end, { desc = "Toggle background light/dark" })
 vim.keymap.set("n", "<leader>tx", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Toggle diagnostics" })
 vim.keymap.set("n", "<leader>tm", "<cmd>lua MiniMap.toggle()<CR>", { desc = "Toggle MiniMap" })
@@ -86,3 +86,18 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 vim.keymap.set("n", "<leader>gt", "<cmd>lua MiniDiff.toggle_overlay()<CR>", { desc = "Git Toggle Overlay" })
 vim.keymap.set("n", "<leader>gr", "gH_", { desc = "Git Reset Line", remap = true })
 vim.keymap.set("n", "<leader>gh", "gHgh", { desc = "Git Reset Hunk", remap = true })
+
+-- INFO: Plugin management.
+vim.keymap.set("n", "<leader>pu", "<cmd>lua vim.pack.update()<CR>")
+vim.keymap.set("n", "<leader>pd", function()
+  vim.ui.input({ prompt = "Plugins to delete (comma-separated): " }, function(input)
+    if not input or input == "" then return end
+
+    local plugins = {}
+    for part in input:gmatch("[^,]+") do
+      table.insert(plugins, vim.trim(part))
+    end
+
+    vim.pack.del(plugins)
+  end)
+end, { desc = "Delete plugins via vim.pack.del" })
