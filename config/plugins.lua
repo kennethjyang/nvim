@@ -21,11 +21,12 @@ vim.pack.add({
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/romus204/tree-sitter-manager.nvim",
 
-	-- Completion and snippets.
+	-- Completion and format.
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.x") },
 	"https://github.com/rafamadriz/friendly-snippets",
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/windwp/nvim-autopairs",
+	"https://github.com/gaoDean/autolist.nvim",
 
 	-- Editor appearance.
 	"https://github.com/lukas-reineke/indent-blankline.nvim",
@@ -91,7 +92,7 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 require("tree-sitter-manager").setup()
 
--- Completion and format.
+-- INFO: Completion and format.
 vim.api.nvim_create_autocmd("InsertEnter", {
 	once = true,
 	callback = function()
@@ -114,6 +115,26 @@ require("conform").setup({
 		lua = { "stylua" },
 	},
 })
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "markdown", "text", "tex", "typst" },
+	callback = function()
+		require("autolist").setup({
+			lists = {
+				typst = {
+					"[-+*]",
+				},
+			},
+		})
+
+		-- Set keymaps for autolist.
+		vim.keymap.set("i", "<tab>", "<cmd>AutolistTab<CR>")
+		vim.keymap.set("i", "<S-tab>", "<cmd>AutolistShiftTab<CR>")
+		vim.keymap.set("i", "<C-b>", "<cmd>AutolistNewBullet<CR>")
+		vim.keymap.set("n", "o", "o<cmd>AutolistNewBullet<CR>")
+		vim.keymap.set("n", "O", "O<cmd>AutolistNewBulletBefore<CR>")
+		vim.keymap.set("n", "<CR>", "<cmd>AutolistToggleCheckbox<cr><CR>")
+	end,
+})
 
 -- INFO: Editor appearance.
 require("ibl").setup()
@@ -123,7 +144,6 @@ require("todo-comments").setup()
 -- INFO: External tools.
 require("toggleterm").setup()
 require("outline").setup({
-	position = "left",
 	providers = {
 		priority = { "lsp", "markdown", "norg", "treesitter" },
 	},
