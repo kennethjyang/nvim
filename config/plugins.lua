@@ -40,6 +40,8 @@ vim.pack.add({
 	"https://github.com/hedyhli/outline.nvim",
 	"https://github.com/epheien/outline-treesitter-provider.nvim",
 	"https://github.com/folke/trouble.nvim",
+	{ src = "https://github.com/chomosuke/typst-preview.nvim", version = vim.version.range("1.x") },
+	"https://github.com/lervag/vimtex",
 })
 
 -- INFO: Plugin configuration.
@@ -52,6 +54,7 @@ require("mini.diff").setup()
 require("mini.tabline").setup()
 require("mini.statusline").setup()
 require("mini.indentscope").setup()
+require("mini.icons").setup()
 require("mini.trailspace").setup()
 require("mini.cursorword").setup()
 
@@ -149,3 +152,15 @@ require("outline").setup({
 	},
 })
 require("trouble").setup()
+require("typst-preview").setup({
+	invert_colors = "auto",
+})
+
+-- VimTex and compiler setup.
+vim.g.vimtex_compiler_latexmk = {
+	aux_dir = ".aux",
+	out_dir = ".out",
+	options = { "-pdf", "-synctex=1" },
+}
+vim.g.vimtex_compiler_clean_paths = { ".aux", ".out" }
+vim.g.vimtex_view_method = "zathura"

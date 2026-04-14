@@ -4,4 +4,8 @@ vim.g.maplocalleader = ","
 -- Pull config files.
 require("config.plugins")
 require("config.options")
+require("config.lsp")
 require("config.keymaps")
+
+-- Run local config (if it exists).
+pcall(require, "config.local")
