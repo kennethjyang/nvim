@@ -34,9 +34,6 @@ vim.keymap.set("n", "<leader>e", "<cmd>lua MiniFiles.open()<CR>", { desc = "Open
 -- LazyGit.
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open LazyGit" })
 
--- Zoxide.
-vim.keymap.set("n", "<leader>o", "<cmd>Telescope zoxide list<CR>", { desc = "Change Directory (Zoxide)" })
-
 -- INFO: Toggles.
 vim.keymap.set("n", "<leader>to", "<cmd>Outline<CR>", { desc = "Toggle outline" })
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Open terminal (horizontal)" })
@@ -86,7 +83,6 @@ vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- INFO: Git.
-
 vim.keymap.set("n", "<leader>gt", "<cmd>lua MiniDiff.toggle_overlay()<CR>", { desc = "Git Toggle Overlay" })
 vim.keymap.set("n", "<leader>gr", "gH_", { desc = "Git Reset Line", remap = true })
 vim.keymap.set("n", "<leader>gh", "gHgh", { desc = "Git Reset Hunk", remap = true })

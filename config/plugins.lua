@@ -25,9 +25,18 @@ vim.pack.add({
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.x") },
 	"https://github.com/rafamadriz/friendly-snippets",
 	"https://github.com/stevearc/conform.nvim",
+	"https://github.com/windwp/nvim-autopairs",
 
 	-- Editor appearance.
 	"https://github.com/lukas-reineke/indent-blankline.nvim",
+	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
+
+	-- External tools.
+	"https://github.com/kdheepak/lazygit.nvim",
+	"https://github.com/akinsho/toggleterm.nvim",
+	"https://github.com/hedyhli/outline.nvim",
+	"https://github.com/epheien/outline-treesitter-provider.nvim",
 })
 
 -- INFO: Plugin configuration.
@@ -91,6 +100,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 				},
 			},
 		})
+		require("nvim-autopairs").setup()
 	end,
 })
 require("conform").setup({
@@ -105,3 +115,13 @@ require("conform").setup({
 
 -- INFO: Editor appearance.
 require("ibl").setup()
+require("nvim-web-devicons").setup()
+
+-- INFO: External tools.
+require("toggleterm").setup()
+require("outline").setup({
+	position = "left",
+	providers = {
+		priority = { "lsp", "markdown", "norg", "treesitter" },
+	},
+})
