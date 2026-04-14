@@ -80,7 +80,7 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - `basedpyright`
     - `ruff`
 - Rust
-    - Rust (`rustup`) 
+    - Rust (`rustup`)
     - `rust-analyzer`
 - Go
     - Go
