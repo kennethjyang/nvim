@@ -6,6 +6,7 @@ Inspired by:
 - The [modular](https://github.com/dam9000/kickstart-modular.nvim/tree/master) version of [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - [`nvim-lite`](https://github.com/radleylewis/nvim-lite)
 - [`minimal-nvim-0.11-lsp-setup`](https://github.com/mplusp/minimal-nvim-0.11-lsp-setup/tree/main)
+- [Evgeni's guide to vim.pack](https://echasnovski.com/blog/2026-03-13-a-guide-to-vim-pack#specification)
 
 ## Installation
 
@@ -23,14 +24,16 @@ Windows
 
 ### Core
 
-- `neovim` 0.11+
+Required or else it won't work:
+
+- `neovim` 0.12+
 - `ripgrep`
 - `lazygit`
 
 ### Useful (Optional) Tools
 
-- Neovide (GUI host for Neovim)
-- A font with nerd fonts (like JetBrainsMono NF)
+- Ghostty with smooth cursor shader.
+- A patched font (like JetBrainsMono NF).
 - Write per-machine configurations into the `lua/config/local.lua` file. They will be run last if it exists and not tracked in git.
 
 Example `local.lua`:
@@ -45,19 +48,6 @@ vim.g.vimtex_view_method = "skim"
 require("toggleterm").setup({
   shell = "powershell.exe",
 })
-```
-
-- `smear-cursor` can be nice if Neovide or Ghostty is unavailable. This file will be ignored.
-
-```lua
--- lua/plugins/smear-cursor.lua
-
-return {
-  "sphamba/smear-cursor.nvim",
-  opts = {
-    time_interval = 7
-  },
-}
 ```
 
 ### Languages
