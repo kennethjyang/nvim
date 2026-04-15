@@ -28,6 +28,9 @@ vim.keymap.set("n", "<leader>bv", "<cmd>vsplit<CR>", { desc = "Split buffer vert
 -- Mason.
 vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", { desc = "Open Mason" })
 
+-- Tree-sitter manager.
+vim.keymap.set("n", "<leader>l", "<cmd>TSManager<CR>", { desc = "Open Tree-sitter manager" })
+
 -- File picker.
 vim.keymap.set("n", "<leader>e", "<cmd>lua MiniFiles.open()<CR>", { desc = "Open explorer" })
 
