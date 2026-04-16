@@ -23,6 +23,9 @@ vim.keymap.set("t", "<C-q>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set("n", "<leader>bs", "<cmd>split<CR>", { desc = "Split buffer horizontally" })
 vim.keymap.set("n", "<leader>bv", "<cmd>vsplit<CR>", { desc = "Split buffer vertically" })
 
+-- Alternate buffer.
+vim.keymap.set("n", "<leader>ba", "<cmd>b#<CR>", { desc = "Switch to alternate buffer" })
+
 -- INFO: Open Views.
 
 -- Mason.
