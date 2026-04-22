@@ -64,7 +64,8 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - `marksman`
     - `ltex-ls-plus`
 - LaTeX
-    - Some LaTeX distribution like MiKTeX or MacTex (macOS)
+    - Some LaTeX distribution like `texlive-scheme-medium` MacTex (macOS)
+    - Latex compiler like `latexmk`
     - `texlab`
     - `tex-fmt`
     - Zathura (Linux)
