@@ -19,8 +19,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highl
 -- Use system clipboard.
 vim.keymap.set("v", "Y", '"+y', { noremap = true, silent = true })
 vim.keymap.set("n", "YY", '"+yy', { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true, desc = "Paste from system clipboard" })
-vim.keymap.set("n", "<leader>P", '"+P', { noremap = true, silent = true, desc = "Paste above from system clipboard" })
+vim.keymap.set({"n", "v"}, "<leader>p", '"+p', { noremap = true, silent = true, desc = "Paste from system clipboard" })
+vim.keymap.set({"n", "v"}, "<leader>P", '"+P', { noremap = true, silent = true, desc = "Paste above from system clipboard" })
 
 -- INFO: Editor Navigation.
 vim.keymap.set("n", "H", "g^", { desc = "Navigate to start of visual line" })
