@@ -9,6 +9,9 @@ vim.keymap.set("n", "<leader>d", "<cmd>bd<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>Q", "<cmd>q!<CR>", { desc = "Force Quit" })
 
+-- Create a new buffer.
+vim.keymap.set("n", "<leader>n", "<cmd>enew<CR>", { desc = "New buffer" })
+
 -- Clear highlights on search when pressing <Esc> in normal mode.
 --  See `:help hlsearch`.
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
@@ -16,6 +19,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highl
 -- Use system clipboard.
 vim.keymap.set("v", "Y", '"+y', { noremap = true, silent = true })
 vim.keymap.set("n", "YY", '"+yy', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true, desc = "Paste from system clipboard" })
+vim.keymap.set("n", "<leader>P", '"+P', { noremap = true, silent = true, desc = "Paste above from system clipboard" })
 
 -- INFO: Editor Navigation.
 vim.keymap.set("n", "H", "g^", { desc = "Navigate to start of visual line" })
