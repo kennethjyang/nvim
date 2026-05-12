@@ -104,8 +104,8 @@ vim.keymap.set("n", "<leader>gr", "gH_", { desc = "Git Reset Line", remap = true
 vim.keymap.set("n", "<leader>gh", "gHgh", { desc = "Git Reset Hunk", remap = true })
 
 -- INFO: Plugin management.
-vim.keymap.set("n", "<leader>pu", "<cmd>lua vim.pack.update()<CR>")
-vim.keymap.set("n", "<leader>pd", function()
+vim.keymap.set("n", "<leader>uu", "<cmd>lua vim.pack.update()<CR>", { desc })
+vim.keymap.set("n", "<leader>ud", function()
 	vim.ui.input({ prompt = "Plugins to delete (comma-separated): " }, function(input)
 		if not input or input == "" then
 			return
