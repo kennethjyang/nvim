@@ -17,10 +17,20 @@ vim.keymap.set("n", "<leader>n", "<cmd>enew<CR>", { desc = "New buffer" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- Use system clipboard.
-vim.keymap.set("v", "Y", '"+y', { noremap = true, silent = true })
-vim.keymap.set("n", "YY", '"+yy', { noremap = true, silent = true })
-vim.keymap.set({"n", "v"}, "<leader>p", '"+p', { noremap = true, silent = true, desc = "Paste from system clipboard" })
-vim.keymap.set({"n", "v"}, "<leader>P", '"+P', { noremap = true, silent = true, desc = "Paste above from system clipboard" })
+vim.keymap.set("v", "Y", '"+y', { noremap = true, silent = true, desc = "Yank to system clipboard" })
+vim.keymap.set("n", "YY", '"+yy', { noremap = true, silent = true, desc = "Yank line to system clipboard" })
+vim.keymap.set(
+	{ "n", "v" },
+	"<leader>p",
+	'"+p',
+	{ noremap = true, silent = true, desc = "Paste from system clipboard" }
+)
+vim.keymap.set(
+	{ "n", "v" },
+	"<leader>P",
+	'"+P',
+	{ noremap = true, silent = true, desc = "Paste above from system clipboard" }
+)
 
 -- INFO: Editor Navigation.
 vim.keymap.set("n", "H", "g^", { desc = "Navigate to start of visual line" })
@@ -104,7 +114,7 @@ vim.keymap.set("n", "<leader>gr", "gH_", { desc = "Git Reset Line", remap = true
 vim.keymap.set("n", "<leader>gh", "gHgh", { desc = "Git Reset Hunk", remap = true })
 
 -- INFO: Plugin management.
-vim.keymap.set("n", "<leader>uu", "<cmd>lua vim.pack.update()<CR>", { desc })
+vim.keymap.set("n", "<leader>uu", "<cmd>lua vim.pack.update()<CR>", { desc = "Update plugins" })
 vim.keymap.set("n", "<leader>ud", function()
 	vim.ui.input({ prompt = "Plugins to delete (comma-separated): " }, function(input)
 		if not input or input == "" then
