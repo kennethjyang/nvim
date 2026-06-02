@@ -97,7 +97,7 @@ vim.keymap.set("n", "<leader>tm", "<cmd>lua MiniMap.toggle()<CR>", { desc = "Tog
 vim.keymap.set("n", "<leader>ff", "<cmd>lua MiniPick.builtin.files()<CR>", { desc = "Find files" })
 vim.keymap.set("n", "<leader>fh", "<cmd>lua MiniPick.builtin.help()<CR>", { desc = "Find help" })
 vim.keymap.set("n", "<leader>fb", "<cmd>lua MiniPick.builtin.buffers()<CR>", { desc = "Find buffers" })
-vim.keymap.set("n", "<leader>fg", "<cmd>lua MiniPick.builtin.live_grep()<CR>", { desc = "Find text in project" })
+vim.keymap.set("n", "<leader>fg", "<cmd>lua MiniPick.builtin.grep_live()<CR>", { desc = "Find text in project" })
 
 -- INFO: Editing Shortcuts.
 
