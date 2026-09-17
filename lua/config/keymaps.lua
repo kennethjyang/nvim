@@ -92,6 +92,10 @@ vim.keymap.set("n", "<leader>tb", function()
 end, { desc = "Toggle background light/dark" })
 vim.keymap.set("n", "<leader>tx", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Toggle diagnostics" })
 vim.keymap.set("n", "<leader>tm", "<cmd>lua MiniMap.toggle()<CR>", { desc = "Toggle MiniMap" })
+vim.keymap.set("n", "<leader>tw", function()
+  vim.o.wrap = not vim.o.wrap
+  vim.o.linebreak = vim.o.wrap
+end, { desc = "Toggle line wrap" })
 
 -- INFO: Picking.
 vim.keymap.set("n", "<leader>ff", "<cmd>lua MiniPick.builtin.files()<CR>", { desc = "Find files" })
