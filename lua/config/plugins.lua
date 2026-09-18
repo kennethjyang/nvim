@@ -117,7 +117,7 @@ require("conform").setup({
 	},
 	formatters_by_filetyp = {
 		lua = { "stylua" },
-		python = { "ruff" },
+		python = { "ruff_organize_imports", "ruff_format" },
 	},
 })
 vim.api.nvim_create_autocmd("FileType", {
