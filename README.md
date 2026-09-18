@@ -62,7 +62,7 @@ Only install what you want to use. Most LSPs and formatters can be installed via
     - `alejandra`
 - Markdown
     - `marksman`
-    - `ltex-ls-plus`
+    - `harperls`
 - LaTeX
     - Some LaTeX distribution like `texlive-scheme-medium` MacTex (macOS)
     - Latex compiler like `latexmk`
