@@ -119,6 +119,12 @@ vim.keymap.set("n", "<leader>gh", "gHgh", { desc = "Git Reset Hunk", remap = tru
 
 -- INFO: Plugin management.
 vim.keymap.set("n", "<leader>uu", "<cmd>lua vim.pack.update()<CR>", { desc = "Update plugins" })
+vim.keymap.set(
+	"n",
+	"<leader>us",
+	'<cmd>lua vim.pack.update(nil, { target = "lockfile" })<CR>',
+	{ desc = "Sync plugins" }
+)
 vim.keymap.set("n", "<leader>ud", function()
 	vim.ui.input({ prompt = "Plugins to delete (comma-separated): " }, function(input)
 		if not input or input == "" then
