@@ -18,3 +18,6 @@ vim.o.mousescroll = "ver:1,hor:1"
 
 -- Lower update time to modern standards.
 vim.o.updatetime = 250
+
+-- Colorscheme
+vim.cmd([[colorscheme tokyonight]])

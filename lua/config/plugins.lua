@@ -29,6 +29,7 @@ vim.pack.add({
 	"https://github.com/gaoDean/autolist.nvim",
 
 	-- Editor appearance.
+	"https://github.com/folke/tokyonight.nvim",
 	"https://github.com/lukas-reineke/indent-blankline.nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
@@ -142,6 +143,10 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- INFO: Editor appearance.
+require("tokyonight").setup({
+	style = "night",
+	day_brightness = 0.25,
+})
 require("ibl").setup()
 require("nvim-web-devicons").setup()
 require("todo-comments").setup()
