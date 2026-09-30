@@ -3,6 +3,7 @@
 -- Save and quit.
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Write" })
 vim.keymap.set("n", "<leader>x", "<cmd>x<CR>", { desc = "Write & quit" })
+vim.keymap.set("n", "<leader>r", "<cmd>e<CR>", { desc = "Reload" })
 
 -- Close windows and buffers.
 vim.keymap.set("n", "<leader>d", "<cmd>bd<CR>", { desc = "Close buffer" })
