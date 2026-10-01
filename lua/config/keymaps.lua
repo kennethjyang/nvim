@@ -47,6 +47,9 @@ vim.keymap.set("n", "<leader>bv", "<cmd>vsplit<CR>", { desc = "Split buffer vert
 -- Alternate buffer.
 vim.keymap.set("n", "<leader>ba", "<cmd>b#<CR>", { desc = "Switch to alternate buffer" })
 
+-- LSP functions.
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+
 -- INFO: Open Views.
 
 -- Mason.
@@ -60,6 +63,14 @@ vim.keymap.set("n", "<leader>e", "<cmd>lua MiniFiles.open()<CR>", { desc = "Open
 
 -- LazyGit.
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open LazyGit" })
+
+-- Notification history.
+vim.keymap.set(
+	"n",
+	"<leader>h",
+	"<cmd>lua require('mini.notify').show_history()<CR>",
+	{ desc = "Show notification history." }
+)
 
 -- INFO: Toggles.
 vim.keymap.set("n", "<leader>to", "<cmd>Outline<CR>", { desc = "Toggle outline" })
