@@ -20,4 +20,4 @@ vim.o.mousescroll = "ver:1,hor:1"
 vim.o.updatetime = 250
 
 -- Colorscheme
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd.colorscheme("tokyonight")

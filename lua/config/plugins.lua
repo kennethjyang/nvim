@@ -146,6 +146,10 @@ vim.api.nvim_create_autocmd("FileType", {
 require("tokyonight").setup({
 	style = "night",
 	day_brightness = 0.25,
+
+	on_highlights = function(hl, _)
+		hl["@markup.raw.markdown_inline"].bg = "NONE"
+	end,
 })
 require("ibl").setup()
 require("nvim-web-devicons").setup()
