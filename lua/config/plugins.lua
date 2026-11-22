@@ -34,6 +34,7 @@ vim.pack.add({
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 	"https://github.com/folke/todo-comments.nvim",
+  "https://github.com/sphamba/smear-cursor.nvim",
 
 	-- External tools.
 	"https://github.com/kdheepak/lazygit.nvim",
@@ -159,6 +160,9 @@ require("render-markdown").setup({
 		style = "language",
 		border = "thin",
 	},
+})
+require("smear_cursor").setup({
+  legacy_computing_symbols_support = true
 })
 
 -- INFO: External tools.

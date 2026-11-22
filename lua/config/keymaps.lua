@@ -81,6 +81,9 @@ vim.keymap.set(
 	"<cmd>ToggleTerm size=60 direction=vertical<CR>",
 	{ desc = "Toggle terminal (vertical)" }
 )
+vim.keymap.set("n", "<leader>ts", function()
+	require("smear_cursor").toggle()
+end, { desc = "Toggle Smear Cursor" })
 vim.keymap.set("n", "<leader>tz", "<cmd>lua MiniMisc.zoom()<CR>", { desc = "Toggle zoom" })
 vim.keymap.set("n", "<leader>tl", function()
 	if vim.diagnostic.config().virtual_lines then
