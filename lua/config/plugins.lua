@@ -31,10 +31,11 @@ vim.pack.add({
 	-- Editor appearance.
 	"https://github.com/folke/tokyonight.nvim",
 	"https://github.com/lukas-reineke/indent-blankline.nvim",
+	"https://github.com/nvim-treesitter/nvim-treesitter-context",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 	"https://github.com/folke/todo-comments.nvim",
-  "https://github.com/sphamba/smear-cursor.nvim",
+	"https://github.com/sphamba/smear-cursor.nvim",
 
 	-- External tools.
 	"https://github.com/kdheepak/lazygit.nvim",
@@ -153,6 +154,7 @@ require("tokyonight").setup({
 	end,
 })
 require("ibl").setup()
+require("treesitter-context").setup()
 require("nvim-web-devicons").setup()
 require("todo-comments").setup()
 require("render-markdown").setup({
