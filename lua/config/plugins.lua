@@ -175,7 +175,6 @@ require("outline").setup({
 		priority = { "lsp", "markdown", "norg", "treesitter" },
 	},
 })
-require("md-render").setup()
 require("trouble").setup()
 require("which-key").setup({
 	preset = "helix",
