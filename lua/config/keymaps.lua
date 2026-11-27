@@ -52,11 +52,16 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 
 -- INFO: Open Views.
 
+-- Markdown preview.
+vim.keymap.set("n", "<leader>mm", "<cmd>MdRender toggle<CR>", { desc = "Toggle Markdown Render" })
+vim.keymap.set("n", "<leader>mf", "<cmd>MdRender<CR>", { desc = "Render markdown in a floating window" })
+vim.keymap.set("n", "<leader>ms", "<cmd>MdRender split<CR>", { desc = "Render markdown in split" })
+
 -- Mason.
-vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", { desc = "Open Mason" })
+vim.keymap.set("n", "<leader>lm", "<cmd>Mason<CR>", { desc = "Open Mason" })
 
 -- Tree-sitter manager.
-vim.keymap.set("n", "<leader>l", "<cmd>TSManager<CR>", { desc = "Open Tree-sitter manager" })
+vim.keymap.set("n", "<leader>ll", "<cmd>TSManager<CR>", { desc = "Open Tree-sitter manager" })
 
 -- File picker.
 vim.keymap.set("n", "<leader>e", "<cmd>lua MiniFiles.open()<CR>", { desc = "Open explorer" })

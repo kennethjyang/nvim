@@ -42,6 +42,7 @@ vim.pack.add({
 	"https://github.com/akinsho/toggleterm.nvim",
 	"https://github.com/hedyhli/outline.nvim",
 	"https://github.com/epheien/outline-treesitter-provider.nvim",
+	"https://github.com/delphinus/md-render.nvim",
 	"https://github.com/folke/trouble.nvim",
 	"https://github.com/folke/which-key.nvim",
 	{ src = "https://github.com/chomosuke/typst-preview.nvim", version = vim.version.range("1.x") },
@@ -174,6 +175,7 @@ require("outline").setup({
 		priority = { "lsp", "markdown", "norg", "treesitter" },
 	},
 })
+require("md-render").setup()
 require("trouble").setup()
 require("which-key").setup({
 	preset = "helix",
